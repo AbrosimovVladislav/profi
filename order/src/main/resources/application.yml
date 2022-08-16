@@ -1,0 +1,52 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: order
+  datasource:
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:35432/order
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 3
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+        jdbc.lob.non_contextual_creation: true
+  sql:
+    init:
+      mode:
+      separator: ;;
+#  zipkin:
+#    base-url: http://zipkin:9411
+#  boot:
+#    admin:
+#      client:
+#        url: http://spring-admin:8085
+
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#  endpoint:
+#    health:
+#      show-details: always
+
+logging:
+  file:
+    name: databasefiller-app.log
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://eureka-server:8761/eureka
+#    fetch-registry: true
+#    register-with-eureka: true
