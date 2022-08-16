@@ -11,7 +11,6 @@
 
   <modules>
     <module>order</module>
-    <module>eureka-server</module>
     <module>spring-admin</module>
   </modules>
 
@@ -66,12 +65,6 @@
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
-    </dependency>
-    <!--    Swagger    -->
-    <dependency>
-      <groupId>io.springfox</groupId>
-      <artifactId>springfox-boot-starter</artifactId>
-      <version>3.0.0</version>
     </dependency>
   </dependencies>
 

@@ -14,6 +14,7 @@ public class TestApiController implements TestApi {
 
   @GetMapping(value = "/test", produces = MediaType.APPLICATION_JSON_VALUE)
   public String test() {
+    log.info("1");
     return "1";
   }
 }
